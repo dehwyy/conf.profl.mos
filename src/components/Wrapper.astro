@@ -1,0 +1,62 @@
+---
+import Navigation from "./Navigation";
+const url = Astro.url
+---
+
+
+<div>
+	<div class="max-w-[1170px] w-100% mx-auto box-shadow bg-white min-h-screen h-full flex flex-col">
+		<div class="flex items-center w-full min-h-[100px] bg-[url('/headerpng.png')] bg-no-repeat px-[15px] pt-[4px]">
+			<div class="w-11/12 px-[15px] flex items-center">
+				<a href="/" class="bg-[url('/ico.svg')] w-[86px] h-[93px] block bg-no-repeat bg-[length:65px] mr-[15px] bg-center"></a>
+				<div class="font-[300] font-Roboto">
+					<p class="text-left leading-[30px] text-[27px]">
+						Научно-практическая конференция
+						<br />
+						<a href="/" class="text-[#0085b2] font-[700] text-[27px]">«Инженеры будущего»</a>
+					</p>
+				</div>
+			</div>
+			<div class="w-1/12 justify-end flex px-[15px]">
+				<a href="/" class="w-[31px] h-[30px]">
+					<i class="icon"> </i>
+				</a>
+			</div>
+		</div>
+		<div class="flex justify-center bg-[#0085b2] w-full leading-[1.42] text-[15px] text-white font-Roboto">
+			<Navigation url={url.pathname}/>
+		</div>
+		<div class="p-[30px] flex-auto">
+			<slot />
+		</div>
+		<footer class="px-[30px] py-[20px] flex justify-between gap-[30px]">
+			<div class="font-[300] text-[17px] text-left text-[#666666]">
+				2023 © Методическое сопровождение проекта:<a class="text-sky-600 underline decoration-1"> Городской методический центр</a>
+			</div>
+			<div class="font-[300] text-[17px] text-right text-[#666666]">
+				2023 © Разработка и поддержка
+				<a class="text-sky-600 underline decoration-1">ГАУ «Центр цифровизации образования»</a>
+				<br />
+				<a class="text-sky-600 underline decoration-1">Техническая поддержка</a>
+			</div>
+		</footer>
+	</div>
+</div>
+
+<style>
+	.box-shadow {
+		box-shadow: 0 0 0, 4px 4px 4px #a6a5a5, -4px 4px 4px #a6a5a5;
+	}
+	.icon {
+		mask: url("../../public/login-icon.svg");
+		-webkit-mask-size: 31px 30px;
+		mask-size: 31px 30px;
+		width: 31px;
+		height: 30px;
+		background-color: #337AB7;
+		font-size: 37px;
+		position: relative;
+		display: inline-block;
+		top: 1px;
+	}
+</style>

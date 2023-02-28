@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Error from "../../components/Error";
+---
+<Layout title="О конференции">
+    <div>
+        <Error client:idle={true}/>
+        <div class="mt-[30px]">
+            <p>
+                <a class="text-sky-500">Инструкция регистрации пользователя</a>
+            </p>
+            <p>
+                Для участия в конференции «Инженеры будущего» необходимо пройти
+                <strong>регистрацию</strong> или воспользоваться созданным ранее <strong>личным кабинетом</strong>
+            </p>
+            <p>
+                Прием заявок для участия в отборочном этапе конкурса проводится с
+                <strong>01 февраля по 01 марта 2023 года</strong>
+            </p>
+            <p>
+                <strong>Для групповых работ</strong>: размещается одна заявка на работу, в ней указывается лидер группы и не более двух участников.
+            </p>
+            <p>
+                <strong>При размещении заявки</strong> необходимо грамотно и корректно заполнить все поля, уделив особое внимание персональной информации и контактным данным.
+            </p>
+            <p>
+                <strong>Адрес электронной почты Проектного офиса: </strong><a class="text-sky-500">eng@mosmetod.ru</a>
+            </p>
+            <p>
+                <strong>Телефон</strong> 8-495-912-63-37 доб. 405
+            </p>
+        </div>
+    </div>
+</Layout>
+
+<style is:global>
+    .fake-btn {
+        border: 1px solid #8f8f8e;
+        background-color: #f9f8f8;
+        padding: 10px 30px;
+        color: #0085b2;
+        font-size: 14px;
+        cursor: pointer;
+        display: block;
+    }
+    p {
+        line-height: 38px;
+        font-size: 14px;
+    }
+</style>
